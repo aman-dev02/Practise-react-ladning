@@ -14,7 +14,7 @@ const Step1 = ({ nextStep }) => {
     <div className="flex h-full items-center justify-center" >
       <div className="w-full max-w-md flex flex-col">
         <div className="text-start">
-          <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">Sign up</h1>
+          <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">Join our community</h1>
         </div>
 
         <div className="mt-5">

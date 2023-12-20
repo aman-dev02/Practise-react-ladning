@@ -7,6 +7,8 @@ import Signup from "./Pages/Signup";
 import { Toaster } from "react-hot-toast";
 import Loader from "./components/Loader"; // Update the path
 import Main from './Pages/Main'
+import AnimatedCursor from "react-animated-cursor"
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -22,6 +24,27 @@ const App = () => {
 
   return (
     <div className="relative main-div">
+        <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='255,255,255'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link'
+      ]}
+    />
       <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-radial-gradient"></div>
 
       {loading ? (
