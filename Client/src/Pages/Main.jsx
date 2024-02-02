@@ -5,9 +5,9 @@ const Main = () => {
   return (
   <>
   <Header/>
-  <Features/>
+  {/* <Features/> */}
   </>
   )
 }
 
-export default Main
+export default Main;

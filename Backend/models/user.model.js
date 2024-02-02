@@ -4,28 +4,41 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     unique: true,
-    required: true
+    required: true,
   },
   email: {
     type: String,
     unique: true,
-    required: true
+    required: true,
   },
   password: {
     type: String,
-    required: true
+    required: true,
   },
   skills: {
     type: [String],
-    default: []
+    default: [],
   },
   location: {
-    type: String
+    type: String,
   },
   domain: {
     type: String,
-    enum: ['full stack developer', 'mobile app developer', 'frontend developer', 'backend developer', 'devops developer', 'data engineer', 'other']
-  }
+    enum: ["web", "mobile", "frontend", "backend", "devops", "data", "other"],
+  },
+  connections: [
+    {
+      user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+      status: {
+        type: String,
+        enum: ["pending", "accepted"],
+        default: "pending",
+      },
+    },
+  ],
 });
 
 module.exports = mongoose.model("User", userSchema);
